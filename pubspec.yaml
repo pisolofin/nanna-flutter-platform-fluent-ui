@@ -4,13 +4,16 @@ version: 0.0.1
 homepage:
 
 environment:
-  sdk: ^3.9.2
-  flutter: ">=1.17.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  fluent_ui: ^4.16.0
+  fluent_ui:
+    git:
+      url: https://github.com/bdlukaa/fluent_ui.git
+      ref: master
   nanna_platform:
     path: ../nanna-flutter-platform
 
