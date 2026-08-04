@@ -8,7 +8,7 @@ void registerNaDatePickerFluentUi(NaUiType uiType) {
     uiType,
     (BuildContext context, NaDatePicker widget) {
       return fluent.DatePicker(
-        selected: widget.initialDate,
+        selected : widget.initialDate,
         onChanged: widget.onDateChanged,
       );
     },

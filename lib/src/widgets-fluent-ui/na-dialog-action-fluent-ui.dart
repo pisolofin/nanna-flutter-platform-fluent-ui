@@ -11,12 +11,14 @@ void registerNaDialogActionFluentUi(NaUiType uiType) {
     (BuildContext context, NaDialogAction widget) {
       final NaDialogActionOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaDialogActionOptionsFluentUi? fluentOptions =
-          options is NaDialogActionOptionsFluentUi ? options : null;
+      final NaDialogActionOptionsFluentUi? fluentOptions = options is NaDialogActionOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.Button(
         onPressed: widget.onPressed,
-        style: fluentOptions?.style,
-        child: widget.child,
+        style    : fluentOptions?.style,
+        child    : widget.child,
       );
     },
   );

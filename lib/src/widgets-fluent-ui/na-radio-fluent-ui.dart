@@ -11,14 +11,16 @@ void registerNaRadioFluentUi(NaUiType uiType) {
     (BuildContext context, NaRadio widget) {
       final NaRadioOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaRadioOptionsFluentUi? fluentOptions =
-          options is NaRadioOptionsFluentUi ? options : null;
+      final NaRadioOptionsFluentUi? fluentOptions = options is NaRadioOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.RadioGroup<dynamic>(
         groupValue: widget.groupValue,
-        onChanged: widget.onChanged ?? (dynamic value) {},
-        child: fluent.RadioButton<dynamic>(
-          value: widget.value,
-          style: fluentOptions?.style,
+        onChanged : widget.onChanged ?? (dynamic value) {},
+        child     : fluent.RadioButton<dynamic>(
+          value    : widget.value,
+          style    : fluentOptions?.style,
           focusNode: fluentOptions?.focusNode,
           autofocus: fluentOptions?.autofocus ?? false,
         ),

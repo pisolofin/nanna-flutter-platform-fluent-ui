@@ -11,14 +11,16 @@ void registerNaAppFluentUi(NaUiType uiType) {
     (BuildContext context, NaApp widget) {
       final NaAppOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaAppOptionsFluentUi? fluentOptions =
-          options is NaAppOptionsFluentUi ? options : null;
+      final NaAppOptionsFluentUi? fluentOptions = options is NaAppOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.FluentApp(
-        title: widget.title,
-        home: widget.home,
-        theme: fluentOptions?.theme,
-        darkTheme: fluentOptions?.darkTheme,
-        themeMode: fluentOptions?.themeMode,
+        title                     : widget.title,
+        home                      : widget.home,
+        theme                     : fluentOptions?.theme,
+        darkTheme                 : fluentOptions?.darkTheme,
+        themeMode                 : fluentOptions?.themeMode,
         debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,
       );
     },

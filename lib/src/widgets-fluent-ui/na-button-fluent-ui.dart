@@ -11,14 +11,16 @@ void registerNaButtonFluentUi(NaUiType uiType) {
     (BuildContext context, NaButton widget) {
       final NaButtonOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaButtonOptionsFluentUi? fluentOptions =
-          options is NaButtonOptionsFluentUi ? options : null;
+      final NaButtonOptionsFluentUi? fluentOptions = options is NaButtonOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.Button(
         onPressed: widget.onPressed,
-        style: fluentOptions?.style,
+        style    : fluentOptions?.style,
         focusNode: fluentOptions?.focusNode,
         autofocus: fluentOptions?.autofocus ?? false,
-        child: widget.child,
+        child    : widget.child,
       );
     },
   );

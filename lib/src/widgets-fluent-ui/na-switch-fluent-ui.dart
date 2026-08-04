@@ -11,12 +11,14 @@ void registerNaSwitchFluentUi(NaUiType uiType) {
     (BuildContext context, NaSwitch widget) {
       final NaSwitchOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaSwitchOptionsFluentUi? fluentOptions =
-          options is NaSwitchOptionsFluentUi ? options : null;
+      final NaSwitchOptionsFluentUi? fluentOptions = options is NaSwitchOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.ToggleSwitch(
-        checked: widget.value,
+        checked  : widget.value,
         onChanged: widget.onChanged,
-        style: fluentOptions?.style,
+        style    : fluentOptions?.style,
         focusNode: fluentOptions?.focusNode,
       );
     },

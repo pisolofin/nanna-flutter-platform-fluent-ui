@@ -11,11 +11,13 @@ void registerNaProgressIndicatorFluentUi(NaUiType uiType) {
     (BuildContext context, NaProgressIndicator widget) {
       final NaProgressIndicatorOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaProgressIndicatorOptionsFluentUi? fluentOptions =
-          options is NaProgressIndicatorOptionsFluentUi ? options : null;
+      final NaProgressIndicatorOptionsFluentUi? fluentOptions = options is NaProgressIndicatorOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.ProgressRing(
-        strokeWidth: fluentOptions?.strokeWidth ?? 4.5,
-        activeColor: fluentOptions?.activeColor,
+        strokeWidth    : fluentOptions?.strokeWidth ?? 4.5,
+        activeColor    : fluentOptions?.activeColor,
         backgroundColor: fluentOptions?.backgroundColor,
       );
     },

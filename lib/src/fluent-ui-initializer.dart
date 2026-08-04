@@ -26,7 +26,7 @@ late final NaUiType naUiTypeFluent;
 void initNannaPlatformFluentUi() {
   naUiTypeFluent = naPlatformServiceRegisterUiType(
     styleId: 'fluent',
-    uiType: 'fluent_ui',
+    uiType : 'fluent_ui',
   );
 
   NaIconData.registerPlatformIcons(naUiTypeFluent, fluentIconMap);

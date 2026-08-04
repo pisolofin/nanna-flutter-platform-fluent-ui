@@ -11,16 +11,18 @@ void registerNaScaffoldFluentUi(NaUiType uiType) {
     (BuildContext context, NaScaffold widget) {
       final NaScaffoldOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaScaffoldOptionsFluentUi? fluentOptions =
-          options is NaScaffoldOptionsFluentUi ? options : null;
+      final NaScaffoldOptionsFluentUi? fluentOptions = options is NaScaffoldOptionsFluentUi
+        ? options
+        : null
+      ;
       final Widget pageContent = fluent.ScaffoldPage(
-        header: widget.appBar,
+        header : widget.appBar,
         content: widget.body,
       );
       return fluent.NavigationView(
-        pane: fluentOptions?.pane,
+        pane             : fluentOptions?.pane,
         transitionBuilder: fluentOptions?.transitionBuilder,
-        content: pageContent,
+        content          : pageContent,
       );
     },
   );

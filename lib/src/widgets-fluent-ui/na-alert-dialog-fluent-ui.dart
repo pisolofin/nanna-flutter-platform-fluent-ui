@@ -11,13 +11,15 @@ void registerNaAlertDialogFluentUi(NaUiType uiType) {
     (BuildContext context, NaAlertDialog widget) {
       final NaAlertDialogOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaAlertDialogOptionsFluentUi? fluentOptions =
-          options is NaAlertDialogOptionsFluentUi ? options : null;
+      final NaAlertDialogOptionsFluentUi? fluentOptions = options is NaAlertDialogOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.ContentDialog(
-        title: fluentOptions?.title ?? widget.title,
-        content: widget.content,
-        actions: widget.actions,
-        style: fluent.ContentDialogThemeData(),
+        title      : fluentOptions?.title ?? widget.title,
+        content    : widget.content,
+        actions    : widget.actions,
+        style      : fluent.ContentDialogThemeData(),
         constraints: fluentOptions?.maxWidth != null
             ? BoxConstraints(maxWidth: fluentOptions!.maxWidth!)
             : const BoxConstraints(maxWidth: 368.0),

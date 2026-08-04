@@ -9,7 +9,7 @@ void registerNaIconFluentUi(NaUiType uiType) {
     (BuildContext context, NaIcon widget) {
       return fluent.Icon(
         widget.icon.resolve(uiType),
-        size: widget.size,
+        size : widget.size,
         color: widget.color,
       );
     },

@@ -11,12 +11,14 @@ void registerNaCheckboxFluentUi(NaUiType uiType) {
     (BuildContext context, NaCheckbox widget) {
       final NaCheckboxOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaCheckboxOptionsFluentUi? fluentOptions =
-          options is NaCheckboxOptionsFluentUi ? options : null;
+      final NaCheckboxOptionsFluentUi? fluentOptions = options is NaCheckboxOptionsFluentUi
+        ? options
+        : null
+      ;
       return fluent.Checkbox(
-        checked: widget.value,
+        checked  : widget.value,
         onChanged: widget.onChanged,
-        style: fluentOptions?.style,
+        style    : fluentOptions?.style,
         focusNode: fluentOptions?.focusNode,
         autofocus: fluentOptions?.autofocus ?? false,
       );

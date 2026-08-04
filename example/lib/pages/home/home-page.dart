@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 import 'package:nanna_platform/nanna_platform.dart';
-import 'package:nanna_flutter_platform_fluent_ui/nanna-flutter-platform-fluent-ui.dart';
+import 'package:nanna_platform_fluent_ui/nanna_platform_fluent_ui.dart';
+
 
 import '../../widgets/example-icons.widget.dart';
 
