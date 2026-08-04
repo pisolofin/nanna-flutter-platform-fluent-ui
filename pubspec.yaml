@@ -10,17 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fluent_ui:
-    git:
-      url: https://github.com/bdlukaa/fluent_ui.git
-      ref: master
-  nanna_platform:
-    path: ../nanna-flutter-platform
+  fluent_ui: ^4.16.1
+  nanna: ^1.0.2
+  nanna_platform: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

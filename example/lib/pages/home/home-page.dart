@@ -1,8 +1,8 @@
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/widgets.dart';
+import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
-import 'package:nanna_flutter_platform_fluent_ui/nanna-flutter-platform-fluent-ui.dart';
 import 'package:nanna_platform/nanna_platform.dart';
+import 'package:nanna_flutter_platform_fluent_ui/nanna-flutter-platform-fluent-ui.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ super.key });
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  Future<void> _showDialogAsync() async {
+  Future _showDialogAsync() async {
     await fluent.showDialog<void>(
       context: context,
       builder: (BuildContext context) {

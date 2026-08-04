@@ -1,6 +1,6 @@
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
+import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 class NaAlertDialogOptionsFluentUi extends NaAlertDialogOptions {
   final fluent.ScrollController? scrollController;

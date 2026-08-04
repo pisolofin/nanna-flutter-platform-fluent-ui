@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:nanna_platform/nanna_platform.dart';
+import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 import 'fluent-ui-options.dart';
 
@@ -58,15 +58,14 @@ void initNannaPlatformFluentUi() {
     (BuildContext context, NaScaffold widget) {
       final NaScaffoldOptions? options = widget.optionsBuilder?.call(context, naUiTypeFluent);
       final NaScaffoldOptionsFluentUi? fluentOptions = options is NaScaffoldOptionsFluentUi ? options : null;
+      final Widget pageContent = fluent.ScaffoldPage(
+        header : widget.appBar,
+        content: widget.body,
+      );
       return fluent.NavigationView(
-        titleBar: widget.appBar != null
-            ? fluent.TitleBar(
-                title: widget.appBar,
-              )
-            : null,
         pane             : fluentOptions?.pane,
         transitionBuilder: fluentOptions?.transitionBuilder,
-        content          : widget.body ?? const fluent.SizedBox.shrink(),
+        content          : pageContent,
       );
     },
   );
@@ -77,12 +76,12 @@ void initNannaPlatformFluentUi() {
       final NaAppOptions? options = widget.optionsBuilder?.call(context, naUiTypeFluent);
       final NaAppOptionsFluentUi? fluentOptions = options is NaAppOptionsFluentUi ? options : null;
       return fluent.FluentApp(
-        title                     : widget.title ?? '',
+        title                     : widget.title,
         home                      : widget.home,
         theme                     : fluentOptions?.theme,
         darkTheme                 : fluentOptions?.darkTheme,
         themeMode                 : fluentOptions?.themeMode,
-        debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner ?? true,
+        debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,
       );
     },
   );
@@ -139,8 +138,8 @@ void initNannaPlatformFluentUi() {
       return fluent.Slider(
         value    : widget.value,
         onChanged: widget.onChanged,
-        min      : widget.min ?? 0.0,
-        max      : widget.max ?? 1.0,
+        min      : widget.min,
+        max      : widget.max,
         style    : fluentOptions?.style,
         focusNode: fluentOptions?.focusNode,
       );
@@ -226,7 +225,7 @@ void initNannaPlatformFluentUi() {
     naUiTypeFluent,
     (BuildContext context, NaDatePicker widget) {
       return fluent.DatePicker(
-        selected : widget.initialDate ?? DateTime.now(),
+        selected : widget.initialDate,
         onChanged: widget.onDateChanged,
       );
     },
@@ -290,7 +289,7 @@ void initNannaPlatformFluentUi() {
       return fluent.RadioGroup<dynamic>(
         groupValue: widget.groupValue,
         onChanged : widget.onChanged ?? (dynamic value) {},
-        child     : fluent.RadioButton(
+        child     : fluent.RadioButton<dynamic>(
           value    : widget.value,
           style    : fluentOptions?.style,
           focusNode: fluentOptions?.focusNode,
