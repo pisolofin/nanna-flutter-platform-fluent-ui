@@ -1,5 +1,6 @@
 import 'package:nanna_platform/nanna_platform.dart';
 
+import 'constants/fluent-icon-map.constant.dart';
 import 'widgets-fluent-ui/na-app-fluent-ui.dart';
 import 'widgets-fluent-ui/na-card-fluent-ui.dart';
 import 'widgets-fluent-ui/na-icon-fluent-ui.dart';
@@ -25,10 +26,13 @@ late final NaUiType naUiTypeFluent;
 void initNannaPlatformFluentUi() {
   naUiTypeFluent = naPlatformServiceRegisterUiType(
     styleId: 'fluent',
-    uiType : 'fluent_ui',
+    uiType: 'fluent_ui',
   );
 
+  NaIconData.registerPlatformIcons(naUiTypeFluent, fluentIconMap);
+
   registerNaAlertDialogFluentUi(naUiTypeFluent);
+
   registerNaAppBarFluentUi(naUiTypeFluent);
   registerNaAppFluentUi(naUiTypeFluent);
   registerNaBottomNavigationBarFluentUi(naUiTypeFluent);

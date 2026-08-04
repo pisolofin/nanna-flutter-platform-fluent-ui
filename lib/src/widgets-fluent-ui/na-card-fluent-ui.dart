@@ -11,15 +11,13 @@ void registerNaCardFluentUi(NaUiType uiType) {
     (BuildContext context, NaCard widget) {
       final NaCardOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaCardOptionsFluentUi? fluentOptions = options is NaCardOptionsFluentUi
-        ? options
-        : null
-      ;
+      final NaCardOptionsFluentUi? fluentOptions =
+          options is NaCardOptionsFluentUi ? options : null;
       return fluent.Card(
         backgroundColor: fluentOptions?.backgroundColor,
-        borderColor    : fluentOptions?.borderColor,
-        padding        : fluentOptions?.padding ?? const EdgeInsets.all(12.0),
-        child          : widget.child,
+        borderColor: fluentOptions?.borderColor,
+        padding: fluentOptions?.padding ?? const EdgeInsets.all(12.0),
+        child: widget.child,
       );
     },
   );

@@ -11,14 +11,12 @@ void registerNaAppBarFluentUi(NaUiType uiType) {
     (BuildContext context, NaAppBar widget) {
       final NaAppBarOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaAppBarOptionsFluentUi? fluentOptions = options is NaAppBarOptionsFluentUi
-        ? options
-        : null
-      ;
+      final NaAppBarOptionsFluentUi? fluentOptions =
+          options is NaAppBarOptionsFluentUi ? options : null;
       return fluent.Container(
-        height : fluentOptions?.isCompact == true ? 40.0 : 50.0,
+        height: fluentOptions?.isCompact == true ? 40.0 : 50.0,
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child  : fluent.Row(
+        child: fluent.Row(
           children: <Widget>[
             // Leading widget
             if (widget.leading != null) ...<Widget>[
@@ -29,7 +27,7 @@ void registerNaAppBarFluentUi(NaUiType uiType) {
               fluent.Expanded(
                 child: fluent.Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child  : widget.title,
+                  child: widget.title,
                 ),
               ),
             ],

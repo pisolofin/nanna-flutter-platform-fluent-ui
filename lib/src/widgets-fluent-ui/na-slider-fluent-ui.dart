@@ -11,16 +11,14 @@ void registerNaSliderFluentUi(NaUiType uiType) {
     (BuildContext context, NaSlider widget) {
       final NaSliderOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaSliderOptionsFluentUi? fluentOptions = options is NaSliderOptionsFluentUi
-        ? options
-        : null
-      ;
+      final NaSliderOptionsFluentUi? fluentOptions =
+          options is NaSliderOptionsFluentUi ? options : null;
       return fluent.Slider(
-        value    : widget.value,
+        value: widget.value,
         onChanged: widget.onChanged,
-        min      : widget.min,
-        max      : widget.max,
-        style    : fluentOptions?.style,
+        min: widget.min,
+        max: widget.max,
+        style: fluentOptions?.style,
         focusNode: fluentOptions?.focusNode,
       );
     },

@@ -4,6 +4,8 @@ import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:nanna_platform/nanna_platform.dart';
 import 'package:nanna_flutter_platform_fluent_ui/nanna-flutter-platform-fluent-ui.dart';
 
+import '../../widgets/example-icons.widget.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -89,10 +91,7 @@ class _HomePageState extends State<HomePage> {
       appBar: NaAppBar(
         title: const Text('Fluent UI Integration Example'),
         actions: <Widget>[
-          NaIconButton(
-            icon: const NaIcon(NaIconData(fluent.FluentIcons.settings)),
-            onPressed: () {},
-          ),
+          NaIconButton(icon: const NaIcon(NaIcons.settings), onPressed: () {}),
         ],
       ),
       body: SingleChildScrollView(
@@ -101,6 +100,8 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              const ExampleIconsWidget(),
+              const SizedBox(height: 16.0),
               const Text('NaButton & NaIconButton:'),
               const SizedBox(height: 8.0),
               Row(
@@ -111,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(width: 16.0),
                   NaIconButton(
-                    icon: const NaIcon(NaIconData(fluent.FluentIcons.add)),
+                    icon: const NaIcon(NaIcons.add),
                     onPressed: () {},
                   ),
                 ],
@@ -180,7 +181,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 8.0),
               NaCard(
                 child: NaListTile(
-                  leading: const NaIcon(NaIconData(fluent.FluentIcons.contact)),
+                  leading: const NaIcon(NaIcons.person),
                   title: const Text('John Doe'),
                   subtitle: const Text('Software Engineer'),
                   onTap: () {},
@@ -212,11 +213,11 @@ class _HomePageState extends State<HomePage> {
                 onTap: _onBottomNavTapped,
                 items: const <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
-                    icon: NaIcon(NaIconData(fluent.FluentIcons.home)),
+                    icon: NaIcon(NaIcons.home),
                     label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon: NaIcon(NaIconData(fluent.FluentIcons.settings)),
+                    icon: NaIcon(NaIcons.settings),
                     label: 'Settings',
                   ),
                 ],

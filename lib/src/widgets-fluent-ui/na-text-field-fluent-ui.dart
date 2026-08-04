@@ -11,23 +11,21 @@ void registerNaTextFieldFluentUi(NaUiType uiType) {
     (BuildContext context, NaTextField widget) {
       final NaTextFieldOptions? options =
           widget.optionsBuilder?.call(context, uiType);
-      final NaTextFieldOptionsFluentUi? fluentOptions = options is NaTextFieldOptionsFluentUi
-        ? options
-        : null
-      ;
+      final NaTextFieldOptionsFluentUi? fluentOptions =
+          options is NaTextFieldOptionsFluentUi ? options : null;
       return fluent.TextBox(
-        controller      : widget.controller,
-        obscureText     : widget.obscureText,
-        onChanged       : widget.onChanged,
-        style           : fluentOptions?.style,
-        decoration      : fluentOptions?.decoration,
-        placeholder     : fluentOptions?.placeholder,
+        controller: widget.controller,
+        obscureText: widget.obscureText,
+        onChanged: widget.onChanged,
+        style: fluentOptions?.style,
+        decoration: fluentOptions?.decoration,
+        placeholder: fluentOptions?.placeholder,
         placeholderStyle: fluentOptions?.placeholderStyle,
-        prefix          : fluentOptions?.prefix,
-        suffix          : fluentOptions?.suffix,
-        padding         : fluentOptions?.padding ?? const EdgeInsets.all(8.0),
-        focusNode       : fluentOptions?.focusNode,
-        autofocus       : fluentOptions?.autofocus ?? false,
+        prefix: fluentOptions?.prefix,
+        suffix: fluentOptions?.suffix,
+        padding: fluentOptions?.padding ?? const EdgeInsets.all(8.0),
+        focusNode: fluentOptions?.focusNode,
+        autofocus: fluentOptions?.autofocus ?? false,
       );
     },
   );

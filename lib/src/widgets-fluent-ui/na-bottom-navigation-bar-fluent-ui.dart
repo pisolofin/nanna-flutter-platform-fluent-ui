@@ -9,7 +9,7 @@ void registerNaBottomNavigationBarFluentUi(NaUiType uiType) {
     (BuildContext context, NaBottomNavigationBar widget) {
       return fluent.Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children         : widget.items
+        children: widget.items
             .asMap()
             .entries
             .map((MapEntry<int, BottomNavigationBarItem> entry) {
@@ -24,7 +24,7 @@ void registerNaBottomNavigationBarFluentUi(NaUiType uiType) {
             },
             child: fluent.Column(
               mainAxisSize: MainAxisSize.min,
-              children    : <Widget>[
+              children: <Widget>[
                 // Item icon
                 isSelected ? item.activeIcon : item.icon,
                 // Item label

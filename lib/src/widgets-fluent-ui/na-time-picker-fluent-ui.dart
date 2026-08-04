@@ -18,7 +18,7 @@ void registerNaTimePickerFluentUi(NaUiType uiType) {
         ),
         onChanged: (DateTime date) {
           widget.onTimerDurationChanged(Duration(
-            hours  : date.hour,
+            hours: date.hour,
             minutes: date.minute,
           ));
         },

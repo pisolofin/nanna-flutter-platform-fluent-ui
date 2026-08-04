@@ -5,7 +5,7 @@ This document contains the cross-platform comparison table between `NaIcons`, Ma
 ## Statistics
 
 - **Total NaIcons Mapped to FluentIcons:** `246`
-- **Total Unique IconData Keys in Map:** `314`
+- **Total Unique NaIconData Entries in Map:** `245`
 
 ---
 
