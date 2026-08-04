@@ -9,7 +9,8 @@ void registerNaProgressIndicatorFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaProgressIndicator>(
     uiType,
     (BuildContext context, NaProgressIndicator widget) {
-      final NaProgressIndicatorOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaProgressIndicatorOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaProgressIndicatorOptionsFluentUi? fluentOptions = options is NaProgressIndicatorOptionsFluentUi
         ? options
         : null

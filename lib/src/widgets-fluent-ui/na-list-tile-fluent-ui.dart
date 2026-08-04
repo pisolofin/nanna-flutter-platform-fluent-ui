@@ -9,7 +9,8 @@ void registerNaListTileFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaListTile>(
     uiType,
     (BuildContext context, NaListTile widget) {
-      final NaListTileOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaListTileOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaListTileOptionsFluentUi? fluentOptions = options is NaListTileOptionsFluentUi
         ? options
         : null
@@ -20,7 +21,9 @@ void registerNaListTileFluentUi(NaUiType uiType) {
         subtitle : widget.subtitle,
         trailing : widget.trailing,
         onPressed: widget.onTap,
-        shape    : fluentOptions?.shape ?? const fluent.RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4.0))),
+        shape    : fluentOptions?.shape ??
+            const fluent.RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(4.0))),
         focusNode: fluentOptions?.focusNode,
         autofocus: fluentOptions?.autofocus ?? false,
       );

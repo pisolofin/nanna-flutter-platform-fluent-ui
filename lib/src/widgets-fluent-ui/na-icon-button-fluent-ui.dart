@@ -9,7 +9,8 @@ void registerNaIconButtonFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaIconButton>(
     uiType,
     (BuildContext context, NaIconButton widget) {
-      final NaIconButtonOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaIconButtonOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaIconButtonOptionsFluentUi? fluentOptions = options is NaIconButtonOptionsFluentUi
         ? options
         : null

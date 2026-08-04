@@ -9,7 +9,8 @@ void registerNaSliderFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaSlider>(
     uiType,
     (BuildContext context, NaSlider widget) {
-      final NaSliderOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaSliderOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaSliderOptionsFluentUi? fluentOptions = options is NaSliderOptionsFluentUi
         ? options
         : null

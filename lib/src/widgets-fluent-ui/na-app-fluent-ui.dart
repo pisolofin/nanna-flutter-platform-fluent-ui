@@ -9,7 +9,8 @@ void registerNaAppFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaApp>(
     uiType,
     (BuildContext context, NaApp widget) {
-      final NaAppOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaAppOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaAppOptionsFluentUi? fluentOptions = options is NaAppOptionsFluentUi
         ? options
         : null

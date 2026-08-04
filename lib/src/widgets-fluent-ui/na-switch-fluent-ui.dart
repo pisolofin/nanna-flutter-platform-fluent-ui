@@ -9,7 +9,8 @@ void registerNaSwitchFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaSwitch>(
     uiType,
     (BuildContext context, NaSwitch widget) {
-      final NaSwitchOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaSwitchOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaSwitchOptionsFluentUi? fluentOptions = options is NaSwitchOptionsFluentUi
         ? options
         : null

@@ -9,7 +9,8 @@ void registerNaTextFieldFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaTextField>(
     uiType,
     (BuildContext context, NaTextField widget) {
-      final NaTextFieldOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaTextFieldOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaTextFieldOptionsFluentUi? fluentOptions = options is NaTextFieldOptionsFluentUi
         ? options
         : null

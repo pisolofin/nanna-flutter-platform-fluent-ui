@@ -9,7 +9,8 @@ void registerNaScaffoldFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaScaffold>(
     uiType,
     (BuildContext context, NaScaffold widget) {
-      final NaScaffoldOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaScaffoldOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaScaffoldOptionsFluentUi? fluentOptions = options is NaScaffoldOptionsFluentUi
         ? options
         : null

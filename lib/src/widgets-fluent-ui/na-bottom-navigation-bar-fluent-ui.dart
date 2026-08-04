@@ -9,7 +9,10 @@ void registerNaBottomNavigationBarFluentUi(NaUiType uiType) {
     (BuildContext context, NaBottomNavigationBar widget) {
       return fluent.Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children         : widget.items.asMap().entries.map((MapEntry<int, BottomNavigationBarItem> entry) {
+        children         : widget.items
+            .asMap()
+            .entries
+            .map((MapEntry<int, BottomNavigationBarItem> entry) {
           final int index = entry.key;
           final BottomNavigationBarItem item = entry.value;
           final bool isSelected = index == widget.currentIndex;

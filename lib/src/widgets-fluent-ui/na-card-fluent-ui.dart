@@ -9,7 +9,8 @@ void registerNaCardFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaCard>(
     uiType,
     (BuildContext context, NaCard widget) {
-      final NaCardOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaCardOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaCardOptionsFluentUi? fluentOptions = options is NaCardOptionsFluentUi
         ? options
         : null

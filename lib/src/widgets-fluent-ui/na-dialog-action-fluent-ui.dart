@@ -9,7 +9,8 @@ void registerNaDialogActionFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaDialogAction>(
     uiType,
     (BuildContext context, NaDialogAction widget) {
-      final NaDialogActionOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaDialogActionOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaDialogActionOptionsFluentUi? fluentOptions = options is NaDialogActionOptionsFluentUi
         ? options
         : null

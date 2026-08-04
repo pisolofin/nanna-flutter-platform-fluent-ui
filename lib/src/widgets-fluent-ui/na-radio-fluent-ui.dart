@@ -9,7 +9,8 @@ void registerNaRadioFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaRadio>(
     uiType,
     (BuildContext context, NaRadio widget) {
-      final NaRadioOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaRadioOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaRadioOptionsFluentUi? fluentOptions = options is NaRadioOptionsFluentUi
         ? options
         : null

@@ -5,7 +5,7 @@ import 'package:nanna_platform/nanna_platform.dart';
 import 'package:nanna_flutter_platform_fluent_ui/nanna-flutter-platform-fluent-ui.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({ super.key });
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (BuildContext context) {
         return NaAlertDialog(
-          title  : const Text('Hello Fluent'),
+          title: const Text('Hello Fluent'),
           content: const Text('This is an example dialog using Fluent UI.'),
           actions: <Widget>[
             NaDialogAction(
@@ -90,11 +90,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Fluent UI Integration Example'),
         actions: <Widget>[
           NaIconButton(
-            icon: const NaIcon(
-              NaIconData(
-                fluent.FluentIcons.settings,
-              ),
-            ),
+            icon: const NaIcon(NaIconData(fluent.FluentIcons.settings)),
             onPressed: () {},
           ),
         ],
@@ -102,24 +98,20 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child  : Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children          : <Widget>[
+            children: <Widget>[
               const Text('NaButton & NaIconButton:'),
               const SizedBox(height: 8.0),
               Row(
                 children: <Widget>[
                   NaButton(
                     onPressed: _showDialogAsync,
-                    child    : const Text('Show Dialog'),
+                    child: const Text('Show Dialog'),
                   ),
                   const SizedBox(width: 16.0),
                   NaIconButton(
-                    icon: const NaIcon(
-                      NaIconData(
-                        fluent.FluentIcons.add,
-                      ),
-                    ),
+                    icon: const NaIcon(NaIconData(fluent.FluentIcons.add)),
                     onPressed: () {},
                   ),
                 ],
@@ -140,13 +132,10 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 8.0),
               Row(
                 children: <Widget>[
-                  NaSwitch(
-                    value    : _switchValue,
-                    onChanged: _onSwitchChanged,
-                  ),
+                  NaSwitch(value: _switchValue, onChanged: _onSwitchChanged),
                   const SizedBox(width: 32.0),
                   NaCheckbox(
-                    value    : _checkboxValue,
+                    value: _checkboxValue,
                     onChanged: _onCheckboxChanged,
                   ),
                 ],
@@ -155,9 +144,9 @@ class _HomePageState extends State<HomePage> {
               const Text('NaSlider:'),
               const SizedBox(height: 8.0),
               NaSlider(
-                value    : _sliderValue,
-                min      : 0.0,
-                max      : 100.0,
+                value: _sliderValue,
+                min: 0.0,
+                max: 100.0,
                 onChanged: _onSliderChanged,
               ),
               const SizedBox(height: 16.0),
@@ -166,17 +155,17 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: <Widget>[
                   NaRadio(
-                    value     : 'Option 1',
+                    value: 'Option 1',
                     groupValue: _radioValue,
-                    onChanged : _onRadioChanged,
+                    onChanged: _onRadioChanged,
                   ),
                   const SizedBox(width: 8.0),
                   const Text('Option 1'),
                   const SizedBox(width: 16.0),
                   NaRadio(
-                    value     : 'Option 2',
+                    value: 'Option 2',
                     groupValue: _radioValue,
-                    onChanged : _onRadioChanged,
+                    onChanged: _onRadioChanged,
                   ),
                   const SizedBox(width: 8.0),
                   const Text('Option 2'),
@@ -191,10 +180,10 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 8.0),
               NaCard(
                 child: NaListTile(
-                  leading : const NaIcon(NaIconData(fluent.FluentIcons.contact)),
-                  title   : const Text('John Doe'),
+                  leading: const NaIcon(NaIconData(fluent.FluentIcons.contact)),
+                  title: const Text('John Doe'),
                   subtitle: const Text('Software Engineer'),
-                  onTap   : () {},
+                  onTap: () {},
                 ),
               ),
               const SizedBox(height: 16.0),
@@ -203,14 +192,14 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: <Widget>[
                   NaDatePicker(
-                    initialDate  : _selectedDate,
-                    firstDate    : DateTime(2000),
-                    lastDate     : DateTime(2100),
+                    initialDate: _selectedDate,
+                    firstDate: DateTime(2000),
+                    lastDate: DateTime(2100),
                     onDateChanged: _onDateChanged,
                   ),
                   const SizedBox(width: 16.0),
                   NaTimePicker(
-                    initialTimerDuration  : _selectedDuration,
+                    initialTimerDuration: _selectedDuration,
                     onTimerDurationChanged: _onDurationChanged,
                   ),
                 ],
@@ -220,14 +209,14 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 8.0),
               NaBottomNavigationBar(
                 currentIndex: _bottomNavIndex,
-                onTap       : _onBottomNavTapped,
-                items       : const <BottomNavigationBarItem>[
+                onTap: _onBottomNavTapped,
+                items: const <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
-                    icon : NaIcon(NaIconData(fluent.FluentIcons.home)),
+                    icon: NaIcon(NaIconData(fluent.FluentIcons.home)),
                     label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon : NaIcon(NaIconData(fluent.FluentIcons.settings)),
+                    icon: NaIcon(NaIconData(fluent.FluentIcons.settings)),
                     label: 'Settings',
                   ),
                 ],

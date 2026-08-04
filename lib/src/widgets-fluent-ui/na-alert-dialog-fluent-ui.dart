@@ -9,7 +9,8 @@ void registerNaAlertDialogFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaAlertDialog>(
     uiType,
     (BuildContext context, NaAlertDialog widget) {
-      final NaAlertDialogOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaAlertDialogOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaAlertDialogOptionsFluentUi? fluentOptions = options is NaAlertDialogOptionsFluentUi
         ? options
         : null

@@ -12,16 +12,13 @@ void main() {
 }
 
 class ExampleApp extends StatelessWidget {
-  const ExampleApp({ super.key });
+  const ExampleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return NaUiTypeScope(
       uiTypes: <NaUiType>[naUiTypeFluent],
-      child  : const NaApp(
-        title: 'Fluent UI Example',
-        home : HomePage(),
-      ),
+      child: const NaApp(title: 'Fluent UI Example', home: HomePage()),
     );
   }
 }

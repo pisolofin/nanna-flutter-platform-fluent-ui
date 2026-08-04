@@ -9,7 +9,8 @@ void registerNaCheckboxFluentUi(NaUiType uiType) {
   naPlatformServiceRegisterWidgetBuilder<NaCheckbox>(
     uiType,
     (BuildContext context, NaCheckbox widget) {
-      final NaCheckboxOptions? options = widget.optionsBuilder?.call(context, uiType);
+      final NaCheckboxOptions? options =
+          widget.optionsBuilder?.call(context, uiType);
       final NaCheckboxOptionsFluentUi? fluentOptions = options is NaCheckboxOptionsFluentUi
         ? options
         : null

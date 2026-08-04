@@ -38,7 +38,8 @@ class NaAppOptionsFluentUi extends NaAppOptions {
   });
 }
 
-class NaBottomNavigationBarOptionsFluentUi extends NaBottomNavigationBarOptions {
+class NaBottomNavigationBarOptionsFluentUi
+    extends NaBottomNavigationBarOptions {
   final fluent.NavigationPaneThemeData? theme;
 
   NaBottomNavigationBarOptionsFluentUi({

@@ -6,7 +6,7 @@ void main() {
   test('Initializes Fluent UI properly and registers builders', () {
     // Invoke initialization
     initNannaPlatformFluentUi();
-    
+
     // Verify that naUiTypeFluent is created
     expect(naUiTypeFluent.value, greaterThan(0));
   });
