@@ -15,14 +15,27 @@ void registerNaAppBarFluentUi(NaUiType uiType) {
         ? options
         : null
       ;
+      final ModalRoute<dynamic>? parentRoute = ModalRoute.of(context);
+      final bool canPop = parentRoute?.canPop ?? false;
+
+      Widget? leadingWidget = widget.leading;
+      if ((leadingWidget == null) && canPop) {
+        leadingWidget = fluent.IconButton(
+          icon     : const fluent.Icon(fluent.FluentIcons.back),
+          onPressed: () {
+            Navigator.maybePop(context);
+          },
+        );
+      }
+
       return fluent.Container(
         height : fluentOptions?.isCompact == true ? 40.0 : 50.0,
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child  : fluent.Row(
           children: <Widget>[
             // Leading widget
-            if (widget.leading != null) ...<Widget>[
-              widget.leading!,
+            if (leadingWidget != null) ...<Widget>[
+              leadingWidget,
             ],
             // Title widget
             if (widget.title != null) ...<Widget>[
@@ -38,6 +51,7 @@ void registerNaAppBarFluentUi(NaUiType uiType) {
           ],
         ),
       );
+
     },
   );
 }

@@ -16,13 +16,22 @@ void registerNaAppFluentUi(NaUiType uiType) {
         : null
       ;
       return fluent.FluentApp(
-        title                     : widget.title,
+        key                       : widget.key,
+        navigatorKey              : widget.navigatorKey,
         home                      : widget.home,
+        routes                    : widget.routes ?? const <String, WidgetBuilder>{},
+        initialRoute              : widget.initialRoute,
+        title                     : widget.title,
+        color                     : widget.color,
+        locale                    : widget.locale,
+        localizationsDelegates    : widget.localizationsDelegates,
+        supportedLocales          : widget.supportedLocales,
         theme                     : fluentOptions?.theme,
         darkTheme                 : fluentOptions?.darkTheme,
         themeMode                 : fluentOptions?.themeMode,
         debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,
       );
+
     },
   );
 }
