@@ -38,8 +38,7 @@ dependencies:
     path: ..
 
   fluent_ui: ^4.16.1
-  nanna_platform:
-    path: ../../nanna-flutter-platform
+  nanna_platform: ^1.1.0
 
 dev_dependencies:
   flutter_test:
