@@ -13,8 +13,8 @@ Below are code rendering Windows (fluent-ui).
 
 <table align="center">
   <tr>
-    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/feature-init/.doc/images/windows-A.png" width="300" /></td>
-    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/feature-init/.doc/images/windows-B.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/main/.doc/images/windows-A.png" width="400" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/main/.doc/images/windows-B.png" width="400" /></td>
   </tr>
 </table>
 
