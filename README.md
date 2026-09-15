@@ -8,6 +8,16 @@ Fluent UI platform extension for the [`nanna_platform`](https://github.com/pisol
 
 Instead of manually branching for Windows or desktop platforms (`if (Platform.isWindows) ...`) and duplicating widget trees with `fluent_ui` components, `nanna_platform_fluent_ui` registers Fluent UI builders into `nanna_platform`'s dynamic widget builder registry. Your generic `nanna_platform` widgets automatically translate into authentic Microsoft Fluent Design components.
 
+## Visual Comparison
+Below are code rendering Windows (fluent-ui).
+
+<table align="center">
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/main/.doc/images/windows-A.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform-fluent-ui/main/.doc/images/windows-B.png" width="300" /></td>
+  </tr>
+</table>
+
 ---
 
 ## Features

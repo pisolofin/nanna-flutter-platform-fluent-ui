@@ -19,7 +19,12 @@ class ExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return NaUiTypeScope(
       uiTypes: <NaUiType>[naUiTypeFluent],
-      child: const NaApp(title: 'Fluent UI Example', home: HomePage()),
+      child  : const NaApp(
+        debugShowCheckedModeBanner: false,
+
+        title: 'Fluent UI Example',
+        home : HomePage()
+      ),
     );
   }
 }
